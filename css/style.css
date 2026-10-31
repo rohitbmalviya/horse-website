@@ -613,6 +613,15 @@ button, input, select, textarea {
   color: #FFFFFF;
 }
 
+/* Responsive Story Split on About Page */
+.story-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 6rem;
+}
+
 /* ==========================================================================
    ABOUT & STABLE ROSTER - 4 CARDS GRID (Matches Image 1 Center Screen)
    ========================================================================== */
@@ -1041,6 +1050,11 @@ textarea.form-control {
 
   .featured-prospect-details {
     padding: 2.5rem 2rem;
+  }
+
+  .story-split-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 }
 
