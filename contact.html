@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Private Lead Capture | Apex Racing Syndicate</title>
+  <meta name="description"
+    content="Enquire to join the Apex Racing Syndicate. Request our confidential bloodstock prospectus or speak directly with our syndicate manager.">
+
+  <!-- Preconnect Google Fonts (Cinzel + Plus Jakarta Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Core Design System -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Floating Luxury Pill Navigation -->
+  <header class="site-header scrolled">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Apex Syndicate Home">
+        <div class="brand-symbol">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 19L9 4L15 9L20 4L17 19H4Z" stroke-linejoin="round" />
+            <circle cx="12" cy="13" r="1.5" fill="currentColor" />
+          </svg>
+        </div>
+        <div class="brand-name">
+          <span class="brand-name-main">APEX <span>RACING</span></span>
+          <span class="brand-name-sub">SYNDICATE</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="horses.html" class="nav-link">Horses</a>
+        <a href="contact.html" class="nav-link active">Contact Us</a>
+      </nav>
+
+      <!-- Pill Button CTA -->
+      <div class="header-cta-wrap">
+        <a href="contact.html" class="btn btn-primary btn-sm">Enquire to Join</a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-toggle" aria-label="Open navigation menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-overlay"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About Us</a>
+    <a href="horses.html" class="nav-link">Horses</a>
+    <a href="contact.html" class="nav-link active">Contact Us</a>
+  </aside>
+
+  <!-- Contact / Lead Capture Section (Matching Image 1 Right Screen) -->
+  <section class="section-pad-lg">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-kicker">Confidential Syndicate Inquiries</span>
+        <h1 class="section-title">Begin Your Ownership Journey</h1>
+        <p class="section-lead">
+          Submit your contact details below to receive our latest bloodstock prospectus and current share availability.
+        </p>
+      </div>
+
+      <!-- Lead Capture Form Card (Matching Image 1 Right Screen) -->
+      <div class="lead-capture-container">
+        <div class="lead-form-card">
+          <div style="text-align: center; margin-bottom: 2.25rem;">
+            <div
+              style="font-family: var(--font-serif); font-size: 1.45rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: #FFFFFF;">
+              Private Lead Capture
+            </div>
+            <div style="font-size: 0.85rem; color: var(--color-champagne); margin-top: 0.35rem;">
+              Direct routing to Syndicate Management
+            </div>
+          </div>
+
+          <form id="syndicateEnquiryForm" novalidate>
+            <!-- Name Input -->
+            <div class="form-group">
+              <label for="fullName" class="form-label">Full Name</label>
+              <input type="text" id="fullName" name="name" class="form-control" placeholder="Enter your full name"
+                required>
+            </div>
+
+            <!-- Email Input -->
+            <div class="form-group">
+              <label for="emailAddr" class="form-label">Email Address</label>
+              <input type="email" id="emailAddr" name="email" class="form-control"
+                placeholder="Enter your email address" required>
+            </div>
+
+            <!-- Phone Input -->
+            <div class="form-group">
+              <label for="phoneNum" class="form-label">Telephone / Mobile</label>
+              <input type="tel" id="phoneNum" name="phone" class="form-control" placeholder="Enter your phone number"
+                required>
+            </div>
+
+            <!-- Share Selector Dropdown (Matching Image 1 Right Screen) -->
+            <div class="form-group">
+              <label for="interestSelect" class="form-label">Share Selector & Prospect</label>
+              <select id="interestSelect" name="interest" class="form-control">
+                <option value="exploring">Select share preference...</option>
+                <option value="2.5-5">2.5% – 5.0% Fractional Share</option>
+                <option value="10plus">10%+ Major Syndicate Share</option>
+                <option value="thoroughbred-colt">Thoroughbred 2YO Colt (Newmarket)</option>
+                <option value="snitzel-2yo">Snitzel 2YO Colt (Lambourn)</option>
+                <option value="frankel-3yo">Frankel 3YO Filly (The Curragh)</option>
+                <option value="harzand-yearling">Harzand Yearling (Yorkshire)</option>
+              </select>
+            </div>
+
+            <!-- Submit Button (Glowing Gold Pill Button) -->
+            <div style="margin-top: 2rem;">
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                Enquire to Join Syndicate
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+
+            <div
+              style="font-size: 0.72rem; color: var(--color-text-subtle); text-align: center; margin-top: 1.25rem; line-height: 1.5;">
+              🔒 Strictly confidential. Your details are never shared with third parties. Prospectus dispatched within
+              24 hours.
+            </div>
+          </form>
+        </div>
+
+        <!-- Direct Manager Info Strip -->
+        <div
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; text-align: center;">
+          <div
+            style="background: rgba(17, 20, 28, 0.4); border: 1px solid var(--color-obsidian-border); border-radius: var(--radius-md); padding: 1.5rem;">
+            <div
+              style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-champagne); font-weight: 700; margin-bottom: 0.35rem;">
+              Direct Email</div>
+            <a href="mailto:director@apexsyndicate.com"
+              style="color: #FFFFFF; font-weight: 600; font-size: 0.9rem;">director@apexsyndicate.com</a>
+          </div>
+
+          <div
+            style="background: rgba(17, 20, 28, 0.4); border: 1px solid var(--color-obsidian-border); border-radius: var(--radius-md); padding: 1.5rem;">
+            <div
+              style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-champagne); font-weight: 700; margin-bottom: 0.35rem;">
+              Phone / WhatsApp</div>
+            <a href="tel:+442079460192" style="color: #FFFFFF; font-weight: 600; font-size: 0.9rem;">+44 (0) 20 7946
+              0192</a>
+          </div>
+
+          <div
+            style="background: rgba(17, 20, 28, 0.4); border: 1px solid var(--color-obsidian-border); border-radius: var(--radius-md); padding: 1.5rem;">
+            <div
+              style="font-size: 0.75rem; text-transform: uppercase; color: var(--color-champagne); font-weight: 700; margin-bottom: 0.35rem;">
+              Stables Base</div>
+            <span style="color: #FFFFFF; font-weight: 600; font-size: 0.9rem;">Newmarket • Curragh</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand-logo">
+            <div class="brand-symbol">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19L9 4L15 9L20 4L17 19H4Z" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="brand-name">
+              <span class="brand-name-main">APEX <span>RACING</span></span>
+              <span class="brand-name-sub">SYNDICATE</span>
+            </div>
+          </a>
+          <p class="footer-brand-desc">
+            A bespoke thoroughbred syndicate delivering unprecedented access to world-class racing. Partnered with
+            group-winning trainers and managed with complete transparency.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="horses.html">Horses</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Direct Contact</h4>
+          <ul class="footer-links">
+            <li style="color: #CBD5E1;">Syndicate Management Office</li>
+            <li><a href="mailto:director@apexsyndicate.com">director@apexsyndicate.com</a></li>
+            <li><a href="tel:+442079460192">+44 (0) 20 7946 0192</a></li>
+            <li style="color: var(--color-text-subtle); margin-top: 0.5rem;">London • Newmarket • Curragh</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2024 Apex Racing Syndicate. All rights reserved.</div>
+        <div>Thoroughbred racing involves risk. Prospective owners should review our regulatory prospectus.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast-notice" id="toastNotice" role="alert" aria-live="polite">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C5A880" stroke-width="2">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <div class="toast-msg">Enquiry received successfully.</div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

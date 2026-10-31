@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About & Stable Roster | Apex Racing Syndicate</title>
+  <meta name="description"
+    content="Discover the Apex Racing Syndicate story, explore our current thoroughbred roster, and learn about the 3-step ownership journey.">
+
+  <!-- Preconnect Google Fonts (Cinzel + Plus Jakarta Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Core Design System -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Floating Luxury Pill Navigation -->
+  <header class="site-header scrolled">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Apex Syndicate Home">
+        <div class="brand-symbol">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 19L9 4L15 9L20 4L17 19H4Z" stroke-linejoin="round" />
+            <circle cx="12" cy="13" r="1.5" fill="currentColor" />
+          </svg>
+        </div>
+        <div class="brand-name">
+          <span class="brand-name-main">APEX <span>RACING</span></span>
+          <span class="brand-name-sub">SYNDICATE</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About Us</a>
+        <a href="horses.html" class="nav-link">Horses</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Pill Button CTA -->
+      <div class="header-cta-wrap">
+        <a href="contact.html" class="btn btn-primary btn-sm">Enquire to Join</a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-toggle" aria-label="Open navigation menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-overlay"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link active">About Us</a>
+    <a href="horses.html" class="nav-link">Horses</a>
+    <a href="contact.html" class="nav-link">Contact Us</a>
+    <div style="margin-top: 1rem;">
+      <a href="contact.html" class="btn btn-primary" style="width: 100%;">Enquire to Join</a>
+    </div>
+  </aside>
+
+  <!-- Stable Roster Header (Matches Center Monitor Header) -->
+  <section class="section-pad-lg" id="roster">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-kicker">Current Campaign Roster</span>
+        <h1 class="section-title">About & Stable Roster</h1>
+        <p class="section-lead">
+          Carefully selected bloodstock conditioned by champion trainers. Explore current prospects open for fractional
+          syndicate ownership.
+        </p>
+      </div>
+
+      <!-- 4-Card Stable Roster Grid (Matching Image 1 Center Screen) -->
+      <div class="stable-roster-grid">
+        <!-- Horse 1: Thoroughbred Colt -->
+        <div class="stable-card">
+          <div class="stable-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1568644396922-5c3bfae12521?auto=format&fit=crop&w=800&q=80"
+              alt="Thoroughbred 2YO Colt">
+            <div class="stable-card-badge">Available</div>
+          </div>
+          <div class="stable-card-body">
+            <h3 class="stable-card-name">Thoroughbred</h3>
+            <div class="stable-card-type">2YO Thoroughbred Colt</div>
+
+            <div class="stable-card-specs">
+              <div class="spec-line">
+                <span class="spec-line-label">Sire × Dam:</span>
+                <span class="spec-line-val">Fastnet × Queen</span>
+              </div>
+              <div class="spec-line">
+                <span class="spec-line-label">Base:</span>
+                <span class="spec-line-val">Newmarket</span>
+              </div>
+              <div class="spec-line">
+                <span class="spec-line-label">Shares Open:</span>
+                <span class="spec-line-val" style="color: var(--color-champagne);">From 2.5%</span>
+              </div>
+            </div>
+
+            <a href="contact.html?horse=thoroughbred-colt" class="btn btn-outline stable-card-btn">
+              View Free Dossier
+            </a>
+          </div>
+        </div>
+
+        <!-- Horse 2: Snitzel 2YO -->
+        <div class="stable-card">
+          <div class="stable-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=800&q=80"
+              alt="2YO Colt by Snitzel">
+            <div class="stable-card-badge" style="border-color: #2E7D32; color: #81C784;">85% Sold</div>
+          </div>
+          <div class="stable-card-body">
+            <h3 class="stable-card-name">Snitzel 2YO</h3>
+            <div class="stable-card-type">Sprint Prospect Colt</div>
+
+            <div class="stable-card-specs">
+              <div class="spec-line">
+                <span class="spec-line-label">Sire × Dam:</span>
+                <span class="spec-line-val">Snitzel × Sovereign</span>
+              </div>
+              <div class="spec-line">
+                <span class="spec-line-label">Base:</span>
+                <span class="spec-line-val">Lambourn</span>
+              </div>
+              <div class="spec-line">
+                <span class="spec-line-label">Shares Open:</span>
+                <span class="spec-line-val" style="color: var(--color-champagne);">15% Remaining</span>
+              </div>
+            </div>
+
+            <a href="contact.html?horse=snitzel-2yo" class="btn btn-outline stable-card-btn">
+              View Free Dossier
+            </a>
+          </div>
+        </div>
+
+        <!-- Horse 3: Frankel 3YO Filly -->
+        <div class="stable-card">
+          <div class="stable-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1598974357801-cbca100e6571?auto=format&fit=crop&w=800&q=80"
+              alt="3YO Filly by Frankel">
+            <div class="stable-card-badge">Classics</div>
+          </div>
+          <div class="stable-card-body">
+            <h3 class="stable-card-name">Frankel 3YO</h3>
+            <div class="stable-card-type">Middle-Distance Filly</div>
+
+            <div class="stable-card-specs">
+              <div class="spec-line">
+                <span class="spec-line-label">Sire × Dam:</span>
+                <span class="spec-line-val">Frankel × Empress</span>
+              </div>
+              <div class="spec-line">
+                <span class="spec-line-label">Base:</span>
+                <span class="spec-line-val">The Curragh</span>
+              </div>
+              <div class="spec-line">
+                <span class="spec-line-label">Shares Open:</span>
+                <span class="spec-line-val" style="color: var(--color-champagne);">From 5.0%</span>
+              </div>
+            </div>
+
+            <a href="contact.html?horse=frankel-3yo" class="btn btn-outline stable-card-btn">
+              View Free Dossier
+            </a>
+          </div>
+        </div>
+
+        <!-- Horse 4: Harzand Yearling -->
+        <div class="stable-card">
+          <div class="stable-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?auto=format&fit=crop&w=800&q=80"
+              alt="Yearling by Harzand">
+            <div class="stable-card-badge">New Class</div>
+          </div>
+          <div class="stable-card-body">
+            <h3 class="stable-card-name">Harzand</h3>
+            <div class="stable-card-type">Yearling Prospect</div>
+
+            <div class="stable-card-specs">
+              <div class="spec-line">
+                <span class="spec-line-label">Sire × Dam:</span>
+                <span class="spec-line-val">Harzand × Starlet</span>
+              </div>
+              <div class="spec-line">
+                <span class="spec-line-label">Base:</span>
+                <span class="spec-line-val">Yorkshire</span>
+              </div>
+              <div class="spec-line">
+                <span class="spec-line-label">Shares Open:</span>
+                <span class="spec-line-val" style="color: var(--color-champagne);">Now Open</span>
+              </div>
+            </div>
+
+            <a href="contact.html?horse=harzand-yearling" class="btn btn-outline stable-card-btn">
+              View Free Dossier
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ownership Journey Horizontal Stepper (Matching Image 1 Center Screen Bottom) -->
+      <div class="journey-stepper-wrap">
+        <div class="section-header center" style="margin-bottom: 2.5rem;">
+          <span class="section-kicker">Simple 3-Stage Process</span>
+          <h2 class="section-title" style="font-size: 2.2rem;">Ownership Journey</h2>
+        </div>
+
+        <div class="journey-stepper-grid">
+          <!-- Step 1 -->
+          <div class="journey-step-item">
+            <div class="journey-step-circle">1</div>
+            <h4 class="journey-step-title">1. Select Prospect</h4>
+            <p class="journey-step-desc">
+              Browse thoroughly vetted yearlings and horses-in-training with full pedigree audits and veterinary
+              dossiers.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="journey-step-item">
+            <div class="journey-step-circle">2</div>
+            <h4 class="journey-step-title">2. Secure Share</h4>
+            <p class="journey-step-desc">
+              Simple digital co-ownership onboarding, official equity certification, and capped monthly training terms.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="journey-step-item">
+            <div class="journey-step-circle">3</div>
+            <h4 class="journey-step-title">3. Step Racing</h4>
+            <p class="journey-step-desc">
+              Collect your owner badge, receive weekly trainer video updates, and stand inside the parade ring on race
+              day.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Syndicate Story Split -->
+      <div style="margin-top: 6rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div>
+          <span class="section-kicker">Our Philosophy</span>
+          <h2 class="section-title">Democratising Elite Racing Without Compromising Luxury</h2>
+          <p style="color: var(--color-text-muted); margin-bottom: 1.5rem; line-height: 1.7;">
+            Traditional thoroughbred ownership has historically been guarded by opacity, astronomical solitary
+            overheads, and antiquated practices. Apex Racing was conceived to dismantle those barriers without
+            compromising an ounce of prestige or competitive pedigree.
+          </p>
+          <p style="color: var(--color-text-muted); margin-bottom: 2rem; line-height: 1.7;">
+            We pair ambitious racing enthusiasts directly with group-winning trainers, tier-one bloodstock analysts, and
+            licensed syndicate managers. Every member is treated as a principal owner.
+          </p>
+
+          <a href="contact.html" class="btn btn-primary">
+            Speak with Syndicate Director
+          </a>
+        </div>
+
+        <div
+          style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-obsidian-border); box-shadow: var(--shadow-card);">
+          <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=1200&q=80"
+            alt="Thoroughbred horse and trainer at morning trackwork"
+            style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand-logo">
+            <div class="brand-symbol">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19L9 4L15 9L20 4L17 19H4Z" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="brand-name">
+              <span class="brand-name-main">APEX <span>RACING</span></span>
+              <span class="brand-name-sub">SYNDICATE</span>
+            </div>
+          </a>
+          <p class="footer-brand-desc">
+            A bespoke thoroughbred syndicate delivering unprecedented access to world-class racing. Partnered with
+            group-winning trainers and managed with complete transparency.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="horses.html">Horses</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Direct Contact</h4>
+          <ul class="footer-links">
+            <li style="color: #CBD5E1;">Syndicate Management Office</li>
+            <li><a href="mailto:director@apexsyndicate.com">director@apexsyndicate.com</a></li>
+            <li><a href="tel:+442079460192">+44 (0) 20 7946 0192</a></li>
+            <li style="color: var(--color-text-subtle); margin-top: 0.5rem;">London • Newmarket • Curragh</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2024 Apex Racing Syndicate. All rights reserved.</div>
+        <div>Thoroughbred racing involves risk. Prospective owners should review our regulatory prospectus.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

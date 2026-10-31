@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Syndicate — Contest Presentation & Live Preview</title>
+  
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #0A0D12;
+      --card-bg: #12161F;
+      --border: rgba(255, 255, 255, 0.08);
+      --gold: #C5A880;
+      --gold-glow: rgba(197, 168, 128, 0.2);
+      --text: #FFFFFF;
+      --muted: #94A3B8;
+      --font: 'Plus Jakarta Sans', sans-serif;
+      --editorial: 'Cormorant Garamond', Georgia, serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.6;
+      padding-bottom: 5rem;
+    }
+
+    /* Presentation Header */
+    .showcase-header {
+      padding: 3rem 2rem 2rem;
+      border-bottom: 1px solid var(--border);
+      background: radial-gradient(circle at 50% 0%, rgba(197, 168, 128, 0.1) 0%, transparent 60%);
+      text-align: center;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      background: rgba(197, 168, 128, 0.12);
+      border: 1px solid rgba(197, 168, 128, 0.35);
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .title {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .title span {
+      color: var(--gold);
+      font-family: var(--editorial);
+      font-style: italic;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 750px;
+      margin: 0 auto 2rem;
+    }
+
+    /* Navigation & Switcher Controls */
+    .controls-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .btn-group {
+      display: inline-flex;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.3rem;
+    }
+
+    .ctrl-btn {
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      font-family: var(--font);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.55rem 1.25rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .ctrl-btn:hover {
+      color: var(--text);
+    }
+
+    .ctrl-btn.active {
+      background: var(--gold);
+      color: #0A0D12;
+      box-shadow: 0 2px 10px rgba(197, 168, 128, 0.3);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1400px;
+      margin: 2.5rem auto 0;
+      padding: 0 1.5rem;
+    }
+
+    /* Specs & Highlights Strip */
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .spec-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.2s ease;
+    }
+
+    .spec-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(197, 168, 128, 0.3);
+    }
+
+    .spec-icon {
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .spec-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+
+    .spec-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* Device Mockup Wrapper */
+    .device-viewport-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 2rem 0 4rem;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .mockup-frame {
+      background: #181C26;
+      border: 2px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 30px var(--gold-glow);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: width 0.4s ease, height 0.4s ease;
+    }
+
+    .mockup-bar {
+      height: 38px;
+      background: #11141B;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+      gap: 0.5rem;
+    }
+
+    .mockup-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .dot-red { background: #FF5F56; }
+    .dot-yellow { background: #FFBD2E; }
+    .dot-green { background: #27C93F; }
+
+    .mockup-url {
+      margin-left: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 4px;
+      padding: 0.2rem 1rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      flex-grow: 1;
+      max-width: 400px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .frame-content {
+      width: 100%;
+      height: 750px;
+      border: none;
+      background: var(--bg);
+    }
+
+    /* Dimensions by device state */
+    .mockup-frame.desktop {
+      width: 100%;
+      max-width: 1360px;
+    }
+
+    .mockup-frame.tablet {
+      width: 820px;
+      border-radius: 24px;
+    }
+
+    .mockup-frame.mobile {
+      width: 390px;
+      border-radius: 36px;
+      border-width: 6px;
+    }
+
+    /* Pitch Section for Contest Copy */
+    .pitch-section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 3rem;
+      max-width: 1000px;
+      margin: 4rem auto 0;
+    }
+
+    .pitch-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .copy-btn {
+      background: var(--gold);
+      color: #0A0D12;
+      border: none;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.6rem 1.25rem;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .pitch-text-box {
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      font-family: monospace;
+      font-size: 0.88rem;
+      color: #E2E8F0;
+      white-space: pre-wrap;
+      line-height: 1.6;
+      max-height: 450px;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="showcase-header">
+    <div class="badge-pill">
+      ★ Contest Winning Showcase & Live Interaction Deck
+    </div>
+    <h1 class="title">Apex Thoroughbred Racing <span>Syndicate</span></h1>
+    <p class="subtitle">
+      A sleek, anti-"tweed & turf" modern web presence. Engineered to project institutional credibility with minimal copy and convert every visitor into an owner enquiry.
+    </p>
+
+    <!-- Controls -->
+    <div class="controls-bar">
+      <!-- Page Switcher -->
+      <div class="btn-group">
+        <button class="ctrl-btn active" onclick="switchPage('index.html', this)">
+          📄 Landing Page
+        </button>
+        <button class="ctrl-btn" onclick="switchPage('about.html', this)">
+          📄 About Us
+        </button>
+        <button class="ctrl-btn" onclick="switchPage('horses.html', this)">
+          📄 Horses Roster
+        </button>
+        <button class="ctrl-btn" onclick="switchPage('contact.html', this)">
+          📄 Contact & Enquiry
+        </button>
+      </div>
+
+      <!-- Device Switcher -->
+      <div class="btn-group">
+        <button class="ctrl-btn active" onclick="switchDevice('desktop', this)">
+          🖥️ Desktop (1440px)
+        </button>
+        <button class="ctrl-btn" onclick="switchDevice('tablet', this)">
+          📱 Tablet (768px)
+        </button>
+        <button class="ctrl-btn" onclick="switchDevice('mobile', this)">
+          📱 Mobile (375px)
+        </button>
+      </div>
+
+      <!-- Open Direct Link -->
+      <a id="directLink" href="index.html" target="_blank" class="ctrl-btn" style="background: rgba(197, 168, 128, 0.15); color: var(--gold); border: 1px solid rgba(197, 168, 128, 0.4);">
+        ↗ Open Direct Page
+      </a>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Value Highlights -->
+    <div class="specs-grid">
+      <div class="spec-card">
+        <div class="spec-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </div>
+        <h3 class="spec-title">Anti-"Tweed & Turf"</h3>
+        <p class="spec-desc">Zero dated hunter green or cluttered tartan. Pure modern luxury with Obsidian (#0A0D12), Brushed Champagne Gold (#C5A880), and razor-sharp typography.</p>
+      </div>
+
+      <div class="spec-card">
+        <div class="spec-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <h3 class="spec-title">Mastery of Minimal Copy</h3>
+        <p class="spec-desc">Designed with editorial hierarchy, metric counters, and horse showcase cards so the site feels established, exclusive, and complete without needing endless text.</p>
+      </div>
+
+      <div class="spec-card">
+        <div class="spec-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+        <h3 class="spec-title">High-Converting Funnel</h3>
+        <p class="spec-desc">Every page smoothly channels the visitor to the Contact intake form, complete with interactive state feedback and instant toast alerts.</p>
+      </div>
+
+      <div class="spec-card">
+        <div class="spec-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 18 22 12 16 6"/>
+            <polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <h3 class="spec-title">WordPress / Webflow Ready</h3>
+        <p class="spec-desc">Built in clean, semantic HTML5/CSS3 with centralized CSS variables, ready for effortless image swapping, text changes, or CMS deployment.</p>
+      </div>
+    </div>
+
+    <!-- Ready-to-Upload Graphic Presentation Boards Preview -->
+    <div style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; margin-bottom: 3.5rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <span style="font-size: 0.75rem; font-weight: 700; color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase;">
+            ★ Contest Entry Files (Ready to Upload to Freelancer)
+          </span>
+          <h3 style="font-size: 1.35rem; font-weight: 800; margin-top: 0.25rem;">
+            High-Resolution Presentation Showcase Boards
+          </h3>
+        </div>
+      </div>
+
+      <!-- Board 1 -->
+      <div style="margin-bottom: 2.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+          <h4 style="font-size: 1.05rem; font-weight: 700;">Board 1: Hero Identity & Responsive Device Showcase</h4>
+          <a href="contest_submission_board.jpg" download="apex_syndicate_presentation_board_1.jpg" class="ctrl-btn" style="background: var(--gold); color: #0A0D12; text-decoration: none;">
+            ⬇ Download Board 1 (JPG)
+          </a>
+        </div>
+        <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+          <img src="contest_submission_board.jpg" alt="Apex Racing Syndicate Contest Presentation Board 1" style="width: 100%; height: auto; display: block;">
+        </div>
+      </div>
+
+      <!-- Board 2 -->
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+          <h4 style="font-size: 1.05rem; font-weight: 700;">Board 2: 3-Page Full Architecture & Lead Capture Workflow</h4>
+          <a href="contest_submission_board_2.jpg" download="apex_syndicate_presentation_board_2.jpg" class="ctrl-btn" style="background: var(--gold); color: #0A0D12; text-decoration: none;">
+            ⬇ Download Board 2 (JPG)
+          </a>
+        </div>
+        <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+          <img src="contest_submission_board_2.jpg" alt="Apex Racing Syndicate Contest Presentation Board 2" style="width: 100%; height: auto; display: block;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Interactive Mockup Frame -->
+    <div class="device-viewport-wrap">
+      <div id="mockupFrame" class="mockup-frame desktop">
+        <div class="mockup-bar">
+          <span class="mockup-dot dot-red"></span>
+          <span class="mockup-dot dot-yellow"></span>
+          <span class="mockup-dot dot-green"></span>
+          <span id="mockupUrlText" class="mockup-url">https://apexsyndicate.com/index.html</span>
+        </div>
+        <iframe id="previewIframe" src="index.html" class="frame-content"></iframe>
+      </div>
+    </div>
+
+    <!-- Contest Entry Proposal Pitch (Copy-Paste Ready) -->
+    <div class="pitch-section">
+      <div class="pitch-header">
+        <div>
+          <h2 style="font-size: 1.5rem; font-weight: 800;">Freelance Contest Entry Description</h2>
+          <p style="color: var(--muted); font-size: 0.9rem;">Copy & paste this winning pitch directly into your contest submission entry box:</p>
+        </div>
+        <button class="copy-btn" onclick="copyPitchText()">
+          📋 Copy Winning Pitch
+        </button>
+      </div>
+
+      <div id="pitchTextBox" class="pitch-text-box">Hello,
+
+Here is my submission for your thoroughbred racing syndicate web presence.
+
+Instead of the tired, traditional "tweed and turf" look (heavy hunter greens and outdated serif fonts), I have created an ultra-modern, high-performance luxury design inspired by modern racing and horology (Deep Obsidian, Brushed Champagne Gold, and generous white space).
+
+HOW THIS SOLVES YOUR EXACT NEEDS:
+
+1. Tailored for Minimal Assets:
+With only a few pieces of copy and photos, standard templates look barren. This design utilizes editorial layout cards, high-impact typographic statements, and clear syndicate metrics so your brand looks established, mature, and exclusive from Day 1.
+
+2. Three Fully Responsive Pages:
+• Landing Page: High-impact hero, syndicate trust indicators, value pillars, and a featured prospect card with an allocation meter and "Enquire to Join" CTAs.
+• About Page: Your story, syndicate mission, the 3-step ownership journey, and an upcoming horse roster showcase.
+• Contact Page: Frictionless lead capture form capturing Name, Email, Phone, Horse of Interest, and Share Allocation size, routing leads directly to your inbox.
+
+3. Easy to Update & Future-Proof:
+• Built with clean, semantic HTML5/CSS3/JavaScript (or ready for 1-click import into WordPress or Webflow).
+• Centralized CSS variables allow swapping brand colors in seconds.
+• Image replacement is straightforward with standard aspect ratios documented in the included setup guide.
+• Includes a ready-to-use PHP mailer script or zero-code Formspree/Web3Forms integration to route leads to your inbox immediately.
+
+All three pages are fully built, coded, tested, and ready for launch! I would love to discuss your brand colors, logo, and photos to cross the finish line together.
+
+Thank you!</div>
+    </div>
+  </div>
+
+  <script>
+    let currentPage = 'index.html';
+
+    function switchPage(page, btn) {
+      currentPage = page;
+      document.getElementById('previewIframe').src = page;
+      document.getElementById('mockupUrlText').textContent = 'https://apexsyndicate.com/' + page;
+      document.getElementById('directLink').href = page;
+      
+      // Update buttons
+      btn.parentElement.querySelectorAll('.ctrl-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    function switchDevice(device, btn) {
+      const frame = document.getElementById('mockupFrame');
+      frame.className = 'mockup-frame ' + device;
+      
+      // Update buttons
+      btn.parentElement.querySelectorAll('.ctrl-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    function copyPitchText() {
+      const text = document.getElementById('pitchTextBox').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelector('.copy-btn');
+        btn.textContent = '✓ Copied to Clipboard!';
+        setTimeout(() => {
+          btn.textContent = '📋 Copy Winning Pitch';
+        }, 3000);
+      });
+    }
+  </script>
+</body>
+</html>
