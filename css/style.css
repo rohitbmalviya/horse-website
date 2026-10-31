@@ -285,6 +285,15 @@ button, input, select, textarea {
   padding: 0.4rem;
 }
 
+/* Mobile Navigation Defaults (Hidden on Desktop) */
+.mobile-nav-drawer {
+  display: none;
+}
+
+.mobile-overlay {
+  display: none;
+}
+
 /* ==========================================================================
    HERO SECTION - SPLIT LUXURY LAYOUT
    ========================================================================== */
