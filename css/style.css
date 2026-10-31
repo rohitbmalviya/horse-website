@@ -549,6 +549,71 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
+   FEATURED PROSPECT CARD (Responsive Split Card on Landing Page)
+   ========================================================================== */
+.featured-prospect-card {
+  background: var(--color-obsidian-card);
+  border: 1px solid var(--color-obsidian-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.05fr 1.35fr;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-smooth);
+}
+
+.featured-prospect-card:hover {
+  border-color: rgba(197, 168, 128, 0.4);
+  box-shadow: var(--shadow-gold-glow);
+}
+
+.featured-prospect-img-wrap {
+  position: relative;
+  min-height: 440px;
+}
+
+.featured-prospect-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-prospect-details {
+  padding: 3.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featured-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.featured-spec-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--color-obsidian-border);
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+}
+
+.featured-spec-label {
+  font-size: 0.7rem;
+  color: var(--color-text-subtle);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.featured-spec-val {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
    ABOUT & STABLE ROSTER - 4 CARDS GRID (Matches Image 1 Center Screen)
    ========================================================================== */
 .stable-roster-grid {
@@ -965,6 +1030,18 @@ textarea.form-control {
   .stable-roster-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .featured-prospect-card {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-prospect-img-wrap {
+    min-height: 320px;
+  }
+
+  .featured-prospect-details {
+    padding: 2.5rem 2rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1044,6 +1121,15 @@ textarea.form-control {
   
   .lead-form-card {
     padding: 2.25rem 1.5rem;
+  }
+
+  .featured-prospect-details {
+    padding: 2rem 1.25rem;
+  }
+
+  .featured-specs-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
   
   .footer-top {
