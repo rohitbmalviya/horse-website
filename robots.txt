@@ -4,4 +4,4 @@ Allow: /
 Disallow: /contact-handler.php
 
 # Sitemaps
-Sitemap: https://apexsyndicate.com/sitemap.xml
+Sitemap: https://horse-website-demo.vercel.app/sitemap.xml

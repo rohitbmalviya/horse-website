@@ -116,7 +116,7 @@ The website includes a complete, production-grade SEO and social sharing setup m
   * `images/twitter-card.jpg` (1200 × 630 px dedicated Twitter/X card image).
 * **Card Design:** Deep Obsidian backdrop with warm Champagne Gold glowing crest, high-res thoroughbred racehorse visual blend, gold pill badge, headline, and key value propositions (`Champion Pedigrees`, `Transparent Ownership`, `VIP Parade Ring Access`).
 * **Tags Configured:** `og:type`, `og:site_name`, `og:url`, `og:title`, `og:description`, `og:image`, `og:image:width`, `og:image:height`, `twitter:card` (`summary_large_image`), `twitter:title`, `twitter:description`, `twitter:image`.
-* **Public Image CDN Endpoint:** The Open Graph and Twitter tags are pre-wired to the public repository CDN (`https://raw.githubusercontent.com/rohitbmalviya/horse-website/main/opengraph-image.png`), ensuring link previews render immediately across WhatsApp, LinkedIn, Twitter, and Facebook without needing a custom domain.
+* **Public Image CDN Endpoint:** The Open Graph and Twitter tags are pre-wired to the public repository CDN (`https://horse-website-demo.vercel.app/opengraph-image.png`), ensuring link previews render immediately across WhatsApp, LinkedIn, Twitter, and Facebook without needing a custom domain.
 * **GitHub Repository Social Preview:** To show the card when your GitHub repo is shared:
   1. Open your repository on GitHub: `https://github.com/rohitbmalviya/horse-website`.
   2. Navigate to **Settings** > **General** > **Social preview**.
@@ -140,4 +140,4 @@ The website includes a complete, production-grade SEO and social sharing setup m
   * `horses.html`: `CollectionPage` with `ItemList` schema for the bloodstock stable.
   * `about.html`: `AboutPage` entity schema.
   * `contact.html`: `ContactPage` with `ContactPoint` manager info.
-* **Domain Customization:** Configured for `https://apexsyndicate.com/`. When deploying to a custom domain, simply replace the domain string in the `<meta property="og:url">`, `<link rel="canonical">`, and `sitemap.xml` files.
+* **Domain Customization:** Configured for `https://horse-website-demo.vercel.app/`. When deploying to a custom domain, simply replace the domain string in the `<meta property="og:url">`, `<link rel="canonical">`, and `sitemap.xml` files.

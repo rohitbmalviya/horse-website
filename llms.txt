@@ -1,0 +1,16 @@
+# Apex Racing Syndicate
+
+> Direct fractional ownership in champion-pedigree thoroughbred racehorses. Partnered with premier metropolitan trainers, managed with institutional transparency.
+
+## Pages
+
+- [Home](https://horse-website-demo.vercel.app/): Apex Thoroughbred Syndicate | Modern Racehorse Ownership — Elite thoroughbred fractional ownership platform, live share allocation meters, champion bloodstock, and VIP parade ring access.
+- [About Us](https://horse-website-demo.vercel.app/about.html): About & Stable Roster — Transparent 3-step ownership journey, bloodstock selection philosophy, and campaign roster.
+- [Horses & Stable](https://horse-website-demo.vercel.app/horses.html): Thoroughbred Stable & Bloodstock Prospects — Current racing roster of 2YO colts, classic 3YO fillies, interactive pedigree dossiers, and live fractional share meters.
+- [Contact & Enquiry](https://horse-website-demo.vercel.app/contact.html): Enquire to Join Syndicate — Confidential investor lead capture engine, prospectus request form, URL-parameter horse pre-selection, and concierge office contact.
+
+## Optional
+
+- [Interactive Showcase & Case Study](https://horse-website-demo.vercel.app/showcase.html): Interactive Case Study & Design System — Multi-device responsive simulator (Desktop 1440px, Tablet 768px, Mobile 375px) and frontend architecture overview.
+- [Sitemap](https://horse-website-demo.vercel.app/sitemap.xml): XML sitemap indexing all public pages and crawl priorities.
+- [Robots](https://horse-website-demo.vercel.app/robots.txt): Search engine crawler directives and index rules.
