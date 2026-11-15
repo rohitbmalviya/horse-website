@@ -1,0 +1,28 @@
+{
+  "name": "Apex Racing — Elite Thoroughbred Racing Syndicate",
+  "short_name": "Apex Racing",
+  "description": "Experience elite thoroughbred racing ownership. Transparent syndicates, champion trainers, and VIP parade ring access.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#c99846",
+  "icons": [
+    {
+      "src": "images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

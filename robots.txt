@@ -1,0 +1,7 @@
+# Robots.txt for Apex Racing Syndicate
+User-agent: *
+Allow: /
+Disallow: /contact-handler.php
+
+# Sitemaps
+Sitemap: https://apexsyndicate.com/sitemap.xml

@@ -104,8 +104,34 @@ The lead form captures **Name, Email, Phone, Interest, Share Size, and Message**
 
 ---
 
-## 🚀 SEO & Fast-Loading Optimizations
+## 🚀 SEO, Social Sharing & Favicon Architecture
 
-* **Preconnected Google Fonts:** Minimal webfont weight loads with zero render-blocking delay.
-* **Semantic HTML5:** Full accessibility labels, `<header>`, `<nav>`, `<section>`, `<aside>`, and `<footer>` semantics.
-* **Open Graph & Meta Tags:** Prepared meta descriptions and title tags ready for social sharing and search indexing.
+The website includes a complete, production-grade SEO and social sharing setup modeled directly after modern web applications (Open Graph 1200×630 cards, Twitter summary cards, multi-resolution favicons, Apple touch icons, PWA manifest, Schema.org JSON-LD structured data, robots.txt, and sitemap.xml):
+
+### 1. Social Sharing & Link Previews (Open Graph & Twitter Cards)
+* **High-Resolution Card Assets:**
+  * `images/og-image.jpg` (1200 × 630 px, optimized progressive JPEG for WhatsApp, Facebook, LinkedIn, Slack, Telegram, Discord).
+  * `images/og-image.png` (1200 × 630 px lossless PNG).
+  * `images/twitter-card.jpg` (1200 × 630 px dedicated Twitter/X card image).
+* **Card Design:** Deep Obsidian backdrop with warm Champagne Gold glowing crest, high-res thoroughbred racehorse visual blend, gold pill badge, headline, and key value propositions (`Champion Pedigrees`, `Transparent Ownership`, `VIP Parade Ring Access`).
+* **Tags Configured:** `og:type`, `og:site_name`, `og:url`, `og:title`, `og:description`, `og:image`, `og:image:width`, `og:image:height`, `twitter:card` (`summary_large_image`), `twitter:title`, `twitter:description`, `twitter:image`.
+
+### 2. Comprehensive Favicon & App Icon Suite
+* `favicon.ico`: Multi-resolution icon containing 16×16, 32×32, and 48×48 px layers for classic browser tabs and bookmarks.
+* `icon.svg`: Modern scalable vector favicon with dark obsidian gradient and glowing champagne gold apex crest for high-DPI retina screens.
+* `apple-touch-icon.png`: 180 × 180 px high-res icon for iOS Safari home screen bookmarking.
+* `images/favicon-96x96.png`: 96 × 96 px high-density desktop icon.
+* `images/icon-192.png`: 192 × 192 px standard PWA Android launcher icon.
+* `images/icon-512.png`: 512 × 512 px high-res splash icon.
+* `images/icon-maskable-512.png`: 512 × 512 px adaptive maskable icon with safe margins for Android adaptive icons.
+* `site.webmanifest` & `manifest.json`: Web App Manifest specifying app name, theme color (`#080A0F`), standalone display mode, and icon mappings.
+
+### 3. Search Engine Discovery & Structured Data
+* **Robots & Crawlers:** `robots.txt` directing search spiders and referencing the XML sitemap.
+* **Sitemap:** `sitemap.xml` indexing all 5 pages with change frequencies and priorities.
+* **Schema.org Structured Data (JSON-LD):**
+  * `index.html`: `WebSite` and `SportsOrganization` entity definitions.
+  * `horses.html`: `CollectionPage` with `ItemList` schema for the bloodstock stable.
+  * `about.html`: `AboutPage` entity schema.
+  * `contact.html`: `ContactPage` with `ContactPoint` manager info.
+* **Domain Customization:** Configured for `https://apexsyndicate.com/`. When deploying to a custom domain, simply replace the domain string in the `<meta property="og:url">`, `<link rel="canonical">`, and `sitemap.xml` files.
