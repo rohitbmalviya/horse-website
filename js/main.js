@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.style.color = '#FFFFFF';
 
         // Show Toast
-        showToast("Thank you for your enquiry. Our Syndicate Director will contact you within 24 hours with the prospectus.");
+        showToast("Thank you for your enquiry. Our Syndicate Concierge will contact you within 24 hours with the prospectus.");
 
         // Reset form after delay
         setTimeout(() => {

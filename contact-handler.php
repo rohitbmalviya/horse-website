@@ -1,11 +1,11 @@
 <?php
 /**
- * APEX RACING SYNDICATE - CONTACT FORM HANDLER
- * Directs incoming ownership inquiries to the syndicate manager's inbox.
+ * APEX RACING SYNDICATE - CONTACT FORM HANDLER (DEMO & PRODUCTION ROUTER)
+ * Directs incoming ownership inquiries to the syndicate concierge inbox.
  */
 
 // REPLACE WITH YOUR DESTINATION EMAIL ADDRESS:
-$recipient_email = "director@apexsyndicate.com"; 
+$recipient_email = "inquiries@apexsyndicate.com"; 
 $email_subject   = "New Syndicate Ownership Enquiry - Apex Racing";
 
 // Ensure request is POST

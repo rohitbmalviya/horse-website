@@ -32,14 +32,14 @@ ModernHorseSyndicateWebsite/
 ├── about.html            # About & Syndicate Mission Page
 ├── horses.html           # Dedicated Horses & Bloodstock Stable Page
 ├── contact.html          # Contact & Private Lead Capture Page
-├── showcase.html         # Interactive contest presentation deck & device switcher
+├── showcase.html         # Interactive portfolio case study showcase & multi-device viewer
 ├── contact-handler.php   # Secure PHP mail router script
 ├── css/
 │   └── style.css         # Complete design system & responsive styling
 ├── js/
 │   └── main.js           # Header scroll effects, mobile drawer, form interactions
-├── contest_submission_board.jpg    # Contest Entry 1 (Hero & Devices)
-├── contest_submission_board_2.jpg  # Contest Entry 2 (Multi-Page Architecture)
+├── portfolio_showcase_board_1.jpg   # Architecture Board 1 (Hero & Responsive Devices)
+├── portfolio_showcase_board_2.jpg   # Architecture Board 2 (Multi-Page Architecture & Lead Funnel)
 └── README.md             # Documentation & Setup Guide
 ```
 
@@ -110,11 +110,17 @@ The website includes a complete, production-grade SEO and social sharing setup m
 
 ### 1. Social Sharing & Link Previews (Open Graph & Twitter Cards)
 * **High-Resolution Card Assets:**
+  * `opengraph-image.png` (1200 × 630 px master PNG in root directory).
   * `images/og-image.jpg` (1200 × 630 px, optimized progressive JPEG for WhatsApp, Facebook, LinkedIn, Slack, Telegram, Discord).
   * `images/og-image.png` (1200 × 630 px lossless PNG).
   * `images/twitter-card.jpg` (1200 × 630 px dedicated Twitter/X card image).
 * **Card Design:** Deep Obsidian backdrop with warm Champagne Gold glowing crest, high-res thoroughbred racehorse visual blend, gold pill badge, headline, and key value propositions (`Champion Pedigrees`, `Transparent Ownership`, `VIP Parade Ring Access`).
 * **Tags Configured:** `og:type`, `og:site_name`, `og:url`, `og:title`, `og:description`, `og:image`, `og:image:width`, `og:image:height`, `twitter:card` (`summary_large_image`), `twitter:title`, `twitter:description`, `twitter:image`.
+* **Public Image CDN Endpoint:** The Open Graph and Twitter tags are pre-wired to the public repository CDN (`https://raw.githubusercontent.com/rohitbmalviya/horse-website/main/opengraph-image.png`), ensuring link previews render immediately across WhatsApp, LinkedIn, Twitter, and Facebook without needing a custom domain.
+* **GitHub Repository Social Preview:** To show the card when your GitHub repo is shared:
+  1. Open your repository on GitHub: `https://github.com/rohitbmalviya/horse-website`.
+  2. Navigate to **Settings** > **General** > **Social preview**.
+  3. Click **Edit** > **Upload an image...** and select `opengraph-image.png` from this project folder.
 
 ### 2. Comprehensive Favicon & App Icon Suite
 * `favicon.ico`: Multi-resolution icon containing 16×16, 32×32, and 48×48 px layers for classic browser tabs and bookmarks.
